@@ -29,7 +29,7 @@ function App() {
   } else {
     return (
       <div className="App">
-        <h1>Ajout d'une Tâche</h1>
+        <h1>Ajouter une Tâche</h1>
         <AddTask />
         <h1>Liste des Tâches</h1>
         <TaskList tasks={items} />
