@@ -16,6 +16,7 @@ function App() {
         result => {
           setItems(result);
           setIsLoaded(true);
+          console.log(result);
         },
         error => {
           setIsLoaded(true);

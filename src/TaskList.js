@@ -6,12 +6,10 @@ function TaskList(props) {
         <ul>
           <li className="TitleCurrentTask">Tâches en cours</li>
           {props.tasks
-
             .filter(item => item.isComplete === false)
-            .sort((a, b) => a.createdAt - b.createdAt)
             .map(item => (
               <li key={item.id}>
-                {item.description} {item.createdAt} {item.isComplete}
+                {item.createdAt} : {item.description}
               </li>
             ))}
         </ul>
@@ -23,7 +21,7 @@ function TaskList(props) {
             .filter(item => item.isComplete)
             .map(item => (
               <li key={item.id}>
-                {item.description} {item.createdAt} {item.isComplete}
+                {item.createdAt} : {item.description}
               </li>
             ))}
         </ul>
