@@ -10,11 +10,11 @@ function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://605375c645e4b30017291be6.mockapi.io/tasks")
+    fetch("https://605375c645e4b30017291be6.mockapi.io/tasks") //Récupération de l'API qui contient toutes les tâches
       .then(response => response.json())
       .then(
         result => {
-          setItems(result);
+          setItems(result); //items prends la valeur du tableau d'objet JSON
           setIsLoaded(true);
           console.log(result);
         },
