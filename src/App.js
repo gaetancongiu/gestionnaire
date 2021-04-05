@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TaskList from "./TaskList";
 import AddTask from "./AddTask";
+import "./App.css";
 import DeleteTask from "./DeleteTask";
 
 function App() {
@@ -30,12 +31,12 @@ function App() {
   } else {
     return (
       <div className="App">
-        <h1>Supprimer les tâches terminées</h1>
-        <button onClick={DeleteTask(items)}>Supprimer Tâches</button>
-        <h1>Ajouter une Tâche</h1>
-        <AddTask />
         <h1>Liste des Tâches</h1>
         <TaskList tasks={items} />
+        <h1>Ajouter une Tâche</h1>
+        <AddTask />
+        <h1>Supprimer les tâches terminées</h1>
+        <button onClick={DeleteTask(items)}>Supprimer Tâches</button>
       </div>
     );
   }
