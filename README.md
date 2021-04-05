@@ -14,17 +14,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 3. Un champ texte permet d’ajouter une nouvelle tâche en cours
 
-## 4. Un bouton permet de supprimer toutes les tâches terminées
+## 4. La liste de tâches est récupérée depuis une API externe disponible à l’adresse : https://5efb52e180d8170016f7639f.mockapi.io/tasks (ci-après désignée par endpoint).
 
-## 5. La liste de tâches est récupérée depuis une API externe disponible à l’adresse : https://5efb52e180d8170016f7639f.mockapi.io/tasks (ci-après désignée par endpoint).
+## 5. Les actions d’ajout, de marquage terminé et de suppression des tâches effectuent l’action sur l’API. La structure complète d’un objet task est la suivante :
 
-## 6. Les actions d’ajout, de marquage terminé et de suppression des tâches effectuent l’action sur l’API. La structure complète d’un objet task est la suivante :
+# Fonctionnalités en cours d'implémentation
+
+## 1. Un bouton permet de supprimer toutes les tâches terminées
 
 # Fonctionnalités restant à implémentées
 
-## Ordonné chaque bloc par date de création
+## 1. Ordonné chaque bloc par date de création
 
-## La possibilité de marqué une tâche comme terminée
+## 2. La possibilité de marqué une tâche comme terminée
 
 # Bibliothèques utilisées
 
