@@ -2,69 +2,32 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Gestionnaire de tâche
 
-In the project directory, you can run:
+> Voici un gestionnaire de tâche basique encore en cours de développement. Pour le moment il permet d'afficher les tâches qui proviennent d'une [API](https://605375c645e4b30017291be6.mockapi.io/tasks/) sous forme de liste (les unes sous les autres) en 2 blocs : les tâches en cours et les tâches terminées. Il y a un formulaire en dessous des listes qui permet de rajouter une tâche en cours sur l'API ainsi qu'un bouton permettant de supprimer toutes les tâches terminées aussi sur l'API.
 
-### `yarn start`
+# Fonctionnalités implémentées
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 1. Tâches affichées sous forme de liste (les unes sous les autres)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 2. Les tâches sont ordonnées en deux blocs : d’abord les tâches en cours, ensuite les tâches terminées
 
-### `yarn test`
+## 3. Un champ texte permet d’ajouter une nouvelle tâche en cours
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. Un bouton permet de supprimer toutes les tâches terminées
 
-### `yarn build`
+## 5. La liste de tâches est récupérée depuis une API externe disponible à l’adresse : https://5efb52e180d8170016f7639f.mockapi.io/tasks (ci-après désignée par endpoint).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 6. Les actions d’ajout, de marquage terminé et de suppression des tâches effectuent l’action sur l’API. La structure complète d’un objet task est la suivante :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Fonctionnalités restant à implémentées
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ordonné chaque bloc par date de création
 
-### `yarn eject`
+## La possibilité de marqué une tâche comme terminée
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Bibliothèques utilisées
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## React Hook Form
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Utilisé pour simplifier l'implémentation d'un formulaire dans le code du fichier AddTask.js ainsi que la récupération des données du formulaire pour pouvoir effectuer l'action d'ajout sur l'API.
