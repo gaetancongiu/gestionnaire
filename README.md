@@ -22,6 +22,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 1. Un bouton permet de supprimer toutes les tâches terminées
 
+Actuellement tous les tâches qui sont terminées (isComplete: true dans l'API) sont supprimées dès le chargement de la page.
+
 # Fonctionnalités restant à implémentées
 
 ## 1. Ordonné chaque bloc par date de création
