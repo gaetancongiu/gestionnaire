@@ -37,7 +37,7 @@ function App() {
         <h1>Ajouter une Tâche</h1>
         <AddTask />
         <h1>Supprimer les tâches terminées</h1>
-        <button onClick={DeleteTask(items)}>Supprimer Tâches</button>
+        <button onClick={() => DeleteTask(items)}>Supprimer Tâches</button>
       </div>
     );
   }
