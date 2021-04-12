@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 
 function AddTask(props) {
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (
     data //Récupération des données entrées par l'utilisateur une fois qu'il a cliqué sur le bouton
   ) =>
@@ -25,12 +26,10 @@ function AddTask(props) {
         ref={register({ required: true })}
       />
       <input
-        type="text"
-        placeholder="YYYY-MM-DD"
+        type="datetime-local"
         name="createdAt"
         ref={register({
-          required: true,
-          pattern: /[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/i //Pour que l'utilisateur respecte le format de date
+          required: true
         })}
       />
       <input type="submit" />
