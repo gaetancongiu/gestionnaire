@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-function AddTask() {
+function AddTask(props) {
   const { register, handleSubmit } = useForm();
   const onSubmit = (
     data //Récupération des données entrées par l'utilisateur une fois qu'il a cliqué sur le bouton
@@ -12,7 +12,9 @@ function AddTask() {
         "Content-type": "application/json; charset=UTF-8"
       },
       body: JSON.stringify(data, (data.isComplete = false))
-    }).then(response => response.json());
+    })
+      .then(response => response.json())
+      .then(() => props.refresh());
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

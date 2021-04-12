@@ -9,7 +9,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
+  const refresh = () => {
     fetch("https://605375c645e4b30017291be6.mockapi.io/tasks") //Récupération de l'API qui contient toutes les tâches
       .then(response => response.json())
       .then(
@@ -27,6 +27,10 @@ function App() {
           setError(error);
         }
       );
+  };
+
+  useEffect(() => {
+    refresh();
   }, []);
 
   if (error) {
@@ -39,7 +43,7 @@ function App() {
         <h1>Liste des Tâches</h1>
         <TaskList tasks={items} />
         <h1>Ajouter une Tâche</h1>
-        <AddTask />
+        <AddTask refresh={refresh} />
         <h1>Supprimer les tâches terminées</h1>
         <button onClick={() => DeleteTask(items)}>Supprimer Tâches</button>
       </div>
