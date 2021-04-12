@@ -14,7 +14,11 @@ function App() {
       .then(response => response.json())
       .then(
         result => {
-          setItems(result); //items prends la valeur du tableau d'objet JSON
+          setItems(
+            result.sort((a, b) => {
+              return new Date(a.createdAt) - new Date(b.createdAt);
+            })
+          ); //items prends la valeur du tableau d'objet JSON
           setIsLoaded(true);
           console.log(result);
         },
