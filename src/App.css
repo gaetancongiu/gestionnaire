@@ -87,7 +87,12 @@ button {
   padding: 1em 1em;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 1em;
   cursor: pointer;
+}
+
+.TaskList button {
+  float: right;
+  height: 1em;
+  outline-style: none;
 }

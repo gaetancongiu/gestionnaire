@@ -41,7 +41,7 @@ function App() {
     return (
       <div className="App">
         <h1>Liste des Tâches</h1>
-        <TaskList tasks={items} />
+        <TaskList tasks={items} refresh={refresh} />
         <h1>Ajouter une Tâche</h1>
         <AddTask refresh={refresh} />
         <h1>Supprimer les tâches terminées</h1>
