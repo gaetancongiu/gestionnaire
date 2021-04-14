@@ -20,9 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 6. Un bouton permet de supprimer toutes les tâches terminées
 
-# Fonctionnalités restant à implémentées
-
-## 1. La possibilité de marqué une tâche comme terminée
+## 7. La possibilité de marqué une tâche comme terminée
 
 # Bibliothèques utilisées
 
